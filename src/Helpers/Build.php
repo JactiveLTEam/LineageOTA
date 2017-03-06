@@ -224,7 +224,7 @@
                 $ret = $token;
                 if ( $token == 'experimental' && ( $type == 'cm' || version_compare ( $version, '14.1', '<' ) ) ) $ret = 'snapshot';
                 if ( $token == 'unofficial' && ( $type == 'cm' || version_compare ( $version, '14.1', '<' ) ) ) $ret = 'nightly';
-				if ( $token == 'custom' ) $ret = 'nightly';
+				if ( $token == 'custom' ) $ret = 'unofficial';
             }
 
             return $ret;
