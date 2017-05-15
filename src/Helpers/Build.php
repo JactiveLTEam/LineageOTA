@@ -127,12 +127,7 @@
 
             if ( empty($path) ) $path = $this->filePath;
             // Pretty much faster if it is available
-            if ( $this->commandExists( 'md5sum' ) ) {
-                $tmp = explode("  ", exec( 'md5sum ' . $path));
-                $ret = $tmp[0];
-            } else {
-                $ret = md5_file($path);
-            }
+            $ret = md5_file($path);
 
             return $ret;
         }
@@ -278,8 +273,8 @@
          * @param string $cmd The current command to execute
          * @return boolean Return True if available, False if not
          */
-        private function commandExists($cmd){
+        /**private function commandExists($cmd){
             $returnVal = shell_exec("which $cmd");
             return (empty($returnVal) ? false : true);
-        }
+        }*/
     }
