@@ -247,8 +247,8 @@
         private function _getChangelogUrl(){
             $ret = str_replace('.zip', '.txt', $this->url);
 
-            if ( file_exists( str_replace('.zip', '.html', $this->filePath) ) )
-              $ret = str_replace('.zip', '.html', $this->url);
+            if ( file_exists( str_replace('.zip', '.changelog.html', $this->filePath) ) )
+              $ret = str_replace('.zip', '.changelog.html', $this->url);
 
             return $ret;
         }
